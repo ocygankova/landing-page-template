@@ -1,0 +1,29 @@
+//colors
+$c-primary: #4a99d3;
+$c-secondary: #d3844a;
+$c-font: #0f001a;
+$c-muted: rgba($c-font, 0.5);
+$c-active: #009584;
+$c-dark: #260041;
+$c-light: #fff;
+
+//font
+$font-size-base: 16px;
+$line-height-base: 26px;
+$font-family-base: 'Objective', sans-serif;
+$font-weight-base: 400;
+$letter-spacing-base: normal;
+
+//container
+$width-min-body: 320px;
+$width-container: 990px; //max-width + padding
+
+//media
+$w-xl: 1400px;
+$w-l: 1200px;
+$w-m: 992px;
+$w-s: 768px;
+$w-xs: 576px;
+
+$h-s: 768px;
+$h-xs: 576px;

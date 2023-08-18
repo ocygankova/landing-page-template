@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-width: $width-min-body;
+  color: $c-font;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  background-color: $c-light;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  letter-spacing: $letter-spacing-base;
+}
+
+.container {
+  max-width: $width-container;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100vh;
+}

@@ -1,0 +1,233 @@
+.reviews {
+  padding: 150px 0;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: -10;
+    width: 140px;
+    height: 140px;
+    background-image: url(../images/bg-dots.png);
+    @media (max-width: $w-xl) {
+      top: 2%;
+    }
+    @media (max-width: $w-m) {
+      top: -50%;
+    }
+    @media (max-width: $w-s) {
+      height: 100px;
+      top: auto;
+      bottom: 0;
+    }
+    @media (max-width: $w-xs) {
+      height: 50px;
+    }
+  }
+
+  @media (max-height: $h-s), (max-width: $w-m) {
+    padding: 80px 0;
+  }
+  &__title {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    @media (max-width: $w-s) {
+      margin-bottom: 30px;
+    }
+  }
+}
+.slider {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin-right: 200px;
+    max-width: 1196px;
+    overflow: hidden;
+
+    @media (max-width: $w-xl) {
+      margin-right: auto;
+    }
+    @media (max-width: $w-l) {
+      max-width: 100vw;
+    }
+    @media (max-width: $w-s) {
+      padding-bottom: 90px;
+    }
+    @media (max-width: $w-xs) {
+      padding-bottom: 0;
+    }
+  }
+  &__slides-container {
+    width: 300%;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: margin-left 1s ease 0s;
+  }
+
+  &__btn {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c-light;
+    color: $c-primary;
+    position: absolute;
+    bottom: 6px;
+    z-index: 50;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: rgba($c-primary, 0.1);
+    }
+    &:focus {
+      background-color: $c-primary;
+      color: $c-light;
+    }
+    @media (max-width: $w-m) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: $w-xs) {
+      top: 120px;
+      width: 40px;
+    }
+
+    &_left {
+      border-radius: 4px 0 0 4px;
+      right: 100px;
+      box-shadow: -2px 2px 8px rgba(#000, 0.08);
+      @media (max-width: $w-s) {
+        right: 50%;
+      }
+      @media (max-width: $w-xs) {
+        left: 10px;
+      }
+    }
+
+    &_right {
+      border-radius: 0 4px 4px 0;
+      right: 20px;
+      box-shadow: 2px 2px 8px rgba(#000, 0.08);
+      @media (max-width: $w-s) {
+        right: calc(50% - 80px);
+      }
+      @media (max-width: $w-xs) {
+        right: 10px;
+      }
+    }
+  }
+}
+.slide {
+  max-width: 1196px;
+  max-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: $w-l) {
+    max-width: 100vw;
+    width: 100vw;
+  }
+  @media (max-width: $w-m) {
+    align-items: start;
+  }
+  @media (max-width: $w-xs) {
+    flex-direction: column;
+  }
+
+  &__img-box {
+    max-height: 520px;
+    max-width: 680px;
+    margin-bottom: 40px;
+    flex: auto;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 400px;
+      z-index: -1;
+      background-color: rgba($c-primary, 0.1);
+      @media (max-width: $w-m) {
+        height: 360px;
+      }
+    }
+    @media (max-width: $w-m) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $w-s) {
+      flex: 1;
+    }
+    @media (max-width: $w-xs) {
+      flex: none;
+      align-self: center;
+      height: 230px;
+      width: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0px 100px 0 178px;
+    @media (max-width: $w-l) {
+      margin: 0px 100px 0 90px;
+    }
+    @media (max-width: $w-m) {
+      margin: 0;
+      padding: 0 10px;
+    }
+  }
+  &__description {
+    max-width: 440px;
+    padding-right: 20px;
+    margin-left: 100px;
+    @media (max-width: $w-l) {
+      max-width: 400px;
+    }
+    @media (max-width: $w-m) {
+      margin-top: 80px;
+      margin-left: 70px;
+    }
+    @media (max-width: $w-s) {
+      margin-top: 10px;
+      margin-left: 30px;
+      max-width: none;
+      flex: 2;
+    }
+  }
+  &__quote-icon {
+    margin-bottom: 40px;
+    @media (max-width: $w-s) {
+      margin-bottom: 20px;
+      width: 20px;
+    }
+  }
+  &__text {
+    font-weight: 24px;
+    color: $c-muted;
+    margin-bottom: 36px;
+    @media (max-width: $w-s) {
+      margin-bottom: 20px;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
